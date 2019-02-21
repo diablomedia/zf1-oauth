@@ -66,7 +66,7 @@ class Zend_Oauth_ClientTest extends PHPUnit\Framework\TestCase
         );
         $client->setParameterPost($params);
         $client->setMethod(Zend_Http_Client::POST);
-        $this->assertEquals(2, count($client->getSignableParametersAsQueryString()));
+        $this->assertCount(2, $client->getSignableParametersAsQueryString());
     }
 
     /**
@@ -82,6 +82,6 @@ class Zend_Oauth_ClientTest extends PHPUnit\Framework\TestCase
         );
         $client->setParameterPost($params);
         $client->setMethod(Zend_Http_Client::POST);
-        $this->assertEquals(0, count($client->getSignableParametersAsQueryString()));
+        $this->assertCount(0, $client->getSignableParametersAsQueryString());
     }
 }
