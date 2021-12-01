@@ -203,12 +203,12 @@ class Zend_Oauth_Http_Utility
     /**
      * urlencode a value
      *
-     * @param  string $value
+     * @param  string|null $value
      * @return string
      */
     public static function urlEncode($value)
     {
-        $encoded = rawurlencode($value);
+        $encoded = rawurlencode($value ?? '');
         $encoded = str_replace('%7E', '~', $encoded);
         return $encoded;
     }
