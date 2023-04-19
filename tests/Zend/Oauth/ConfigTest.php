@@ -31,6 +31,8 @@
  */
 class Zend_Oauth_ConfigTest extends PHPUnit\Framework\TestCase
 {
+    protected $config;
+
     public function setUp(): void
     {
         $this->config = new Zend_Oauth_Config();

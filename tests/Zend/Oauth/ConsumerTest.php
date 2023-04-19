@@ -190,7 +190,7 @@ class Zend_Oauth_ConsumerTest extends PHPUnit\Framework\TestCase
         $config   = array('consumerKey' => '12345','consumerSecret' => '54321');
         $consumer = new Zend_Oauth_Consumer($config);
         $token    = $consumer->getRequestToken(null, null, new Test_Http_RequestToken_48231);
-        $this->assertTrue($token instanceof Zend_Oauth_Token_Request);
+        $this->assertInstanceOf(Zend_Oauth_Token_Request::class, $token);
     }
 
     public function testGetRedirectUrlReturnsUserAuthorizationUrlWithParameters()
@@ -216,7 +216,7 @@ class Zend_Oauth_ConsumerTest extends PHPUnit\Framework\TestCase
         $rtoken   = new Zend_Oauth_Token_Request;
         $rtoken->setToken('token');
         $token = $consumer->getAccessToken(array('oauth_token' => 'token'), $rtoken, null, new Test_Http_AccessToken_48231);
-        $this->assertTrue($token instanceof Zend_Oauth_Token_Access);
+        $this->assertInstanceOf(Zend_Oauth_Token_Access::class, $token);
     }
 
     public function testGetLastRequestTokenReturnsInstanceWhenExists()
