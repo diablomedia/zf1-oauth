@@ -89,7 +89,7 @@ class Zend_OauthTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($expected['timeout'], $config['timeout']);
     }
 
-    public function providerOauthClientOauthOptions()
+    public static function providerOauthClientOauthOptions()
     {
         $options = array(
             'requestMethod' => 'GET',
@@ -102,7 +102,7 @@ class Zend_OauthTest extends PHPUnit\Framework\TestCase
         );
     }
 
-    public function providerOauthClientConfigHttpClient()
+    public static function providerOauthClientConfigHttpClient()
     {
         return array(
             array(
