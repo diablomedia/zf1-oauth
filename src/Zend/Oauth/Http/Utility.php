@@ -39,7 +39,7 @@ class Zend_Oauth_Http_Utility
     public function assembleParams(
         $url,
         Zend_Oauth_Config_ConfigInterface $config,
-        array $serviceProviderParams = null
+        ?array $serviceProviderParams = null
     ) {
         $params = array(
             'oauth_consumer_key'     => $config->getConsumerKey(),
