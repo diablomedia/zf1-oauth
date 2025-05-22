@@ -39,7 +39,7 @@ class Zend_Oauth_Token_Access extends Zend_Oauth_Token
     public function toHeader(
         $url,
         Zend_Oauth_Config_ConfigInterface $config,
-        array $customParams = null,
+        ?array $customParams = null,
         $realm = null
     ) {
         if (!Zend_Uri::check($url)) {
@@ -59,7 +59,7 @@ class Zend_Oauth_Token_Access extends Zend_Oauth_Token
      * @param  null|array $params
      * @return string
      */
-    public function toQueryString($url, Zend_Oauth_Config_ConfigInterface $config, array $params = null)
+    public function toQueryString($url, Zend_Oauth_Config_ConfigInterface $config, ?array $params = null)
     {
         if (!Zend_Uri::check($url)) {
             throw new Zend_Oauth_Exception(
